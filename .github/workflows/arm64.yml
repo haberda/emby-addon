@@ -38,4 +38,4 @@ jobs:
           docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
           docker buildx create --name multibuilder
           docker buildx use multibuilder
-          docker buildx build --platform linux/arm64 -t eightiesguy/emby-addon-aarch64:${VERSION} -t eightiesguy/emby-addon-aarch64:latest -t eightiesguy/emby-addon-armhf:${VERSION} -t eightiesguy/emby-addon-armhf:latest ./Dockerfile.arm64 --push
+          docker buildx build --platform linux/arm64 -t eightiesguy/emby-addon-aarch64:${VERSION} -t eightiesguy/emby-addon-aarch64:latest -t eightiesguy/emby-addon-armhf:${VERSION} -t eightiesguy/emby-addon-armhf:latest ./arm64 --push
