@@ -1,6 +1,6 @@
-FROM emby/embyserver_arm64v8:4.6.0.37
+FROM emby/embyserver_arm64v8:4.6.2.0
 
-LABEL io.hass.version="4.6.0.37" io.hass.type="addon" io.hass.arch="armhf|aarch64"
+LABEL io.hass.version="4.6.2.0" io.hass.type="addon" io.hass.arch="armhf|aarch64"
 
 RUN ["sed", "-i", "s|config|data|g", "/etc/services.d/emby-server/run"]
 
