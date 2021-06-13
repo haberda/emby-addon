@@ -6,6 +6,12 @@ RUN ["sed", "-i", "s|config|data|g", "/etc/services.d/emby-server/run"]
 
 VOLUME ["/share", "/data", "/media"]
 
+# Build arugments
+ARG BUILD_ARCH
+ARG BUILD_DATE
+ARG BUILD_REF
+ARG BUILD_VERSION
+
 # Labels
 LABEL \
     io.hass.name="Emby Media Server" \
