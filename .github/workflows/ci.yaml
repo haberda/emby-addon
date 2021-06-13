@@ -114,7 +114,7 @@ jobs:
     needs:
       - information
       - lint-addon
-      - lint-hadolint
+      #- lint-hadolint
       - lint-json
       - lint-markdown
       - lint-prettier
