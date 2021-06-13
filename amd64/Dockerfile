@@ -1,7 +1,0 @@
-FROM emby/embyserver:4.6.2.0
-
-LABEL io.hass.version="4.6.2.0" io.hass.type="addon" io.hass.arch="amd64"
-
-RUN sed -i "s|config|data|g" /etc/services.d/emby-server/run
-
-VOLUME ["/share", "/data", "/media"]
