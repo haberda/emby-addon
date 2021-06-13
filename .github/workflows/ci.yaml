@@ -87,27 +87,27 @@ jobs:
         env:
           SHELLCHECK_OPTS: -s bash
 
-  lint-yamllint:
-    name: YAMLLint
-    runs-on: ubuntu-latest
-    steps:
-      - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v2.3.4
-      - name: 🚀 Run YAMLLint
-        uses: frenck/action-yamllint@v1.1
+#  lint-yamllint:
+#    name: YAMLLint
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: ⤵️ Check out code from GitHub
+#        uses: actions/checkout@v2.3.4
+#      - name: 🚀 Run YAMLLint
+#        uses: frenck/action-yamllint@v1.1
 
-  lint-prettier:
-    name: Prettier
-    runs-on: ubuntu-latest
-    steps:
-      - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v2.3.4
-      - name: 🚀 Run Prettier
-        uses: creyD/prettier_action@v3.3
-        with:
-          prettier_options: --write **/*.{json,js,md,yaml}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#  lint-prettier:
+#    name: Prettier
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: ⤵️ Check out code from GitHub
+#        uses: actions/checkout@v2.3.4
+#      - name: 🚀 Run Prettier
+#        uses: creyD/prettier_action@v3.3
+#        with:
+#          prettier_options: --write **/*.{json,js,md,yaml}
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   build:
     name: Build ${{ matrix.architecture }}
@@ -117,9 +117,9 @@ jobs:
       #- lint-hadolint
       - lint-json
       - lint-markdown
-      - lint-prettier
+      #- lint-prettier
       - lint-shellcheck
-      - lint-yamllint
+      #- lint-yamllint
     runs-on: ubuntu-latest
     strategy:
       matrix:
