@@ -8,7 +8,7 @@
     "amd64",
     "armv7"
   ],
-  "description": "Emby Media Server",
+  "description": "Emby Mediaserver",
   "startup": "system",
   "boot": "manual",
   "map": [
