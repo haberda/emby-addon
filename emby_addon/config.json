@@ -1,5 +1,5 @@
 {
-  "name": "emby",
+  "name": "Emby Mediaserver",
   "url": "https://github.com/haberda/hassio_addons/tree/master/emby",
   "version": "dev",
   "slug": "emby",
