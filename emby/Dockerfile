@@ -7,7 +7,7 @@ RUN \
   mkdir -p /app/emby && \
   mkdir -p /data/
   
-ARG EMBY_RELEASE=4.6.2.0
+ARG EMBY_RELEASE=4.6.3.0
 
 # add needed nvidia environment variables for https://github.com/NVIDIA/nvidia-docker
 ENV NVIDIA_DRIVER_CAPABILITIES="compute,video,utility"
@@ -55,7 +55,7 @@ RUN echo "**** cleanup ****" && \
 
 COPY root/ /
 
-RUN useradd -u 911 -U -d /config -s /bin/false abc && \
+RUN useradd -u 911 -U -d /data -s /bin/false abc && \
     usermod -G users abc 
 
 # Build arugments
