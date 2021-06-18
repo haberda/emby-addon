@@ -15,13 +15,13 @@
     "share:rw",
     "media:rw"
   ],
-  "devices": {
+  "devices": [
     "/dev/dri",
     "/dev/vchiq",
     "/dev/video10",
     "/dev/video11",
     "/dev/video12"
-  },
+  ],
   "ports": {
     "8096/tcp": 8096,
     "8920/tcp": 8920,
