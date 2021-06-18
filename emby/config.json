@@ -1,5 +1,5 @@
 {
-  "name": "Emby Mediaserver",
+  "name": "emby",
   "url": "https://github.com/haberda/emby-addon",
   "version": "dev",
   "slug": "emby",
@@ -8,13 +8,20 @@
     "amd64",
     "armv7"
   ],
-  "description": "Emby Mediaserver",
+  "description": "emby media server",
   "startup": "system",
   "boot": "manual",
   "map": [
     "share:rw",
     "media:rw"
   ],
+  "devices": {
+    "/dev/dri",
+    "/dev/vchiq",
+    "/dev/video10",
+    "/dev/video11",
+    "/dev/video12"
+  },
   "ports": {
     "8096/tcp": 8096,
     "8920/tcp": 8920,
