@@ -1,6 +1,6 @@
 {
   "name": "Emby Mediaserver",
-  "url": "https://github.com/haberda/hassio_addons/tree/master/emby",
+  "url": "https://github.com/haberda/emby-addon",
   "version": "dev",
   "slug": "emby",
   "arch": [
