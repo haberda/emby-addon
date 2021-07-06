@@ -7,7 +7,7 @@ RUN \
   mkdir -p /app/emby && \
   mkdir -p /data/
   
-ARG EMBY_RELEASE=4.6.3.0
+ARG EMBY_RELEASE=4.6.4.0
 
 # add needed nvidia environment variables for https://github.com/NVIDIA/nvidia-docker
 ENV NVIDIA_DRIVER_CAPABILITIES="compute,video,utility"
