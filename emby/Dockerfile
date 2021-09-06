@@ -7,6 +7,9 @@ ARG EMBY_RELEASE=4.6.4.0
 # add needed nvidia environment variables for https://github.com/NVIDIA/nvidia-docker
 ENV NVIDIA_DRIVER_CAPABILITIES="compute,video,utility"
 
+# Set shell
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 # install packages
 RUN \
  echo "**** install packages ****" && \
@@ -16,9 +19,12 @@ RUN \
 	cpio \
 	rpm2cpio \
 	bash
+
 # Make folders
-RUN mkdir -p /app/emby
-RUN mkdir -p /data
+RUN \
+  mkdir -p /app/emby && \
+  mkdir -p /data/
+
 # Install emby
 RUN \
   echo "**** install emby ****" && \
