@@ -3,9 +3,8 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/ubuntu-base/amd64:7.0.0
 FROM ${BUILD_FROM}
 ARG BUILD_ARCH
 # Make folders
-RUN \
-  mkdir -p /app/emby && \
-  mkdir -p /data/
+RUN mkdir -p /app/emby
+RUN mkdir -p /data
   
 ARG EMBY_RELEASE=4.6.4.0
 
