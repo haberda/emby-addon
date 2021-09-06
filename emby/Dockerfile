@@ -2,10 +2,6 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/ubuntu-base/amd64:7.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 ARG BUILD_ARCH
-# Make folders
-RUN mkdir -p /app/emby
-RUN mkdir -p /data
-  
 ARG EMBY_RELEASE=4.6.4.0
 
 # add needed nvidia environment variables for https://github.com/NVIDIA/nvidia-docker
@@ -18,7 +14,11 @@ RUN \
  apt-get install -y --no-install-recommends \
 	mesa-va-drivers \
 	cpio \
-	rpm2cpio
+	rpm2cpio \
+	bash
+# Make folders
+RUN mkdir -p /app/emby
+RUN mkdir -p /data
 # Install emby
 RUN \
   echo "**** install emby ****" && \
