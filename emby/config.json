@@ -39,6 +39,6 @@
     "1900/udp": "1900"
   },
   "webui": "http://[HOST]:[PORT:8096]",
-  "snapshot_exclude":["*/cache/", "*/logs/", "*/transcoding-temp/", "*/metadata/"],
+  "backup_exclude":["*/cache/", "*/logs/", "*/transcoding-temp/", "*/metadata/"],
   "image": "ghcr.io/haberda/emby/{arch}"
 }
