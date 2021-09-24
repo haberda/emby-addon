@@ -13,7 +13,8 @@
   "boot": "manual",
   "map": [
     "share:rw",
-    "media:rw"
+    "media:rw",
+    "ssl:rw"
   ],
   "devices": [
     "/dev/dri",
