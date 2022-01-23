@@ -18,7 +18,8 @@ RUN \
 	mesa-va-drivers \
 	cpio \
 	rpm2cpio \
-	bash
+	bash \
+	cifs-utils
 
 # Make folders
 RUN \

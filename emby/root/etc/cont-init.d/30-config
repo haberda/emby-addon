@@ -8,4 +8,3 @@
 # chown abc:abc \
 # 	/data/*
 # fi
-
