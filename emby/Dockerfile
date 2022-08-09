@@ -61,6 +61,10 @@ RUN echo "**** cleanup ****" && \
 
 COPY root/ /
 
+RUN chmod -R +x /etc/cont-init.d/
+
+RUN chmod -R +x /etc/services.d/emby/
+
 RUN useradd -u 911 -U -d /data -s /bin/false abc && \
     usermod -G users abc 
 
