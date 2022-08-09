@@ -55,5 +55,6 @@
   },
   "webui": "http://[HOST]:[PORT:8096]",
   "backup_exclude":["*/cache/", "*/logs/", "*/transcoding-temp/", "*/metadata/"],
+  "init": false,
   "image": "ghcr.io/haberda/emby/{arch}"
 }
