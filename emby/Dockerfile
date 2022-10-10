@@ -1,8 +1,8 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/ubuntu-base/amd64:8.1.0
+ARG BUILD_FROM=ghcr.io/hassio-addons/ubuntu-base/amd64:8.1.1
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 ARG BUILD_ARCH
-ARG EMBY_RELEASE=4.7.6.0
+ARG EMBY_RELEASE=4.7.8.0
 
 # add needed nvidia environment variables for https://github.com/NVIDIA/nvidia-docker
 ENV NVIDIA_DRIVER_CAPABILITIES="compute,video,utility"
