@@ -1,8 +1,8 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/ubuntu-base/amd64:8.2.1
+ARG BUILD_FROM=ghcr.io/hassio-addons/ubuntu-base/amd64:9.0.4
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 ARG BUILD_ARCH
-ARG EMBY_RELEASE=4.7.13.0
+ARG EMBY_RELEASE=4.8.3.0
 
 # add needed nvidia environment variables for https://github.com/NVIDIA/nvidia-docker
 ENV NVIDIA_DRIVER_CAPABILITIES="compute,video,utility"
@@ -18,8 +18,7 @@ RUN \
 	mesa-va-drivers \
 	cpio \
 	rpm2cpio \
-	bash \
-	cifs-utils
+	bash 
 
 # Make folders
 RUN \

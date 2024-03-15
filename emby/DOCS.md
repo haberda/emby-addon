@@ -14,36 +14,6 @@ This add-on allows you to play media to many devices.
 
 Instructions for use can be found in the official [docs](https://support.emby.media/support/solutions/articles/44001159034-quick-start).
 
-## Options
-
-### networkdisks
-
-This option lets you set a list of network shares to mount in the container. They will be mounted in the container at the same path as the share. For example: a NAS share at `//nas/share1/` will be mounted in the container at `/nas/share1/`.
-
-### cifsusername
-
-The username that has access to all listed shares.
-
-### cifspassword
-
-The password to the listed shares for the username specified.
-
-### cifsversion
-
-The version of samba to use. Unless you have a reason, leave it at 3.0.
-
-## Example configuration
-
-```
-networkdisks:
-  - //nas/share1
-  - //nas/share2
-cifsusername: yourUsername
-cifspassword: yourPassword
-cifsversion: '3.0'
-
-```
-
 ## Versioning
 
 This add-on follows the versioning of the upstream project; this is so that you know what verson of the software the container is running.

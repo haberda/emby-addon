@@ -17,7 +17,7 @@ export SSL_CERT_FILE="${APP_DIR}"/etc/ssl/certs/ca-certificates.crt
 
 exec \
 	s6-setuidgid root /app/emby/EmbyServer \
-	-programdata /data \
+	-programdata /config \
 	-ffdetect /app/emby/ffdetect \
 	-ffmpeg /app/emby/ffmpeg \
 	-ffprobe /app/emby/ffprobe \
