@@ -1,25 +1,26 @@
 name: emby
 url: https://github.com/haberda/emby-addon
-version: dev
+version: 4.9.0.25
 slug: emby
 arch:
-  - aarch64
   - amd64
 description: emby media server
 map:
   - addon_config:rw
-  - share:rw
   - media:rw
-devices: 
-  - /dev/dri
-  - /dev/vchiq
 schema: 
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
 host_network: true
 webui: http://[HOST]:[PORT:8096]
+video: true
+environment:
+  GIDLIST: '28,44,100,103,104,107'
+  UID: '0'
+  GID: '0'
 backup_exclude:
   - "*/cache/"
   - "*/logs/"
   - "*/transcoding-temp/"
   - "*/metadata/"
-image: ghcr.io/haberda/emby/{arch}
+image: emby/embyserver
+
