@@ -3,14 +3,12 @@ name: Deploy
 
 # yamllint disable-line rule:truthy
 on:
-  release:
+  push:
+  pull_request:
     types:
-      - published
-  workflow_run:
-    workflows: ["CI"]
-    branches: [main]
-    types:
-      - completed
+      - opened
+      - reopened
+      - synchronize
 
 jobs:
   information:
